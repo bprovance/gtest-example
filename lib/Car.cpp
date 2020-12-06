@@ -21,7 +21,6 @@ int Car::getYear() const {
     return _year;
 }
 
-
 int Car::getRegistration() const {
     return _registration;
 }

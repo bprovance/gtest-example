@@ -23,9 +23,11 @@ public:
 };
 
 TEST_F(DmvTests, DMVGetRegistrationReturnsExpectedValue) {
+    /* Add default behavior to mock object */
     ON_CALL(*mockCar, getRegistration()).WillByDefault(Return(999999));
     ON_CALL(*mockCar, getMake()).WillByDefault(Return("Tesla"));
     ON_CALL(*mockCar, getModel()).WillByDefault(Return("Model S"));
+
     Dmv dmv(std::move(mockCar));
     EXPECT_THAT(dmv.getRegistration("Tesla", "Model S"), Eq(999999));
 }
