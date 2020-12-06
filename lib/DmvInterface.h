@@ -5,8 +5,6 @@
 #include <string>
 #include "CarInterface.h"
 
-namespace Automobile {
-
 class DmvInterface {
 public:
     DmvInterface() = default;
@@ -15,7 +13,5 @@ public:
     virtual int getRegistration(const std::string& make, const std::string& model) const = 0;
     virtual int getNumCars() const = 0;
 };
-
-} // Automobile
 
 #endif /* DMV_INTERFACE_H */

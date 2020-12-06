@@ -5,11 +5,9 @@
 #include <gmock/gmock.h>
 #include <CarInterface.h>
 
-namespace Automobile {
-namespace AutomobileMocks {
 using std::string;
 
-class CarMock: public Automobile::CarInterface {
+class CarMock: public CarInterface {
 public:
     CarMock() = default;
     virtual ~CarMock() = default;
@@ -18,8 +16,5 @@ public:
     MOCK_METHOD(int, getYear, (), (const, final));
     MOCK_METHOD(int, getRegistration, (), (const, final));
 };
-
-} // AutomobileMocks
-} // Automobile
 
 #endif /* CAR_MOCK_H */

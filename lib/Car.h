@@ -6,8 +6,6 @@
 #include <string>
 #include "CarInterface.h"
 
-namespace Automobile {
-
 using std::string;
 
 class Car: public CarInterface {
@@ -24,7 +22,5 @@ private:
     int _registration;
     int _year;
 };
-
-} // Automobile
 
 #endif /* CAR_H */

@@ -6,8 +6,6 @@
 #include "DmvInterface.h"
 #include "CarInterface.h"
 
-namespace Automobile {
-
 class Dmv: public DmvInterface {
 public:
     Dmv(std::unique_ptr<CarInterface> car);
@@ -18,7 +16,5 @@ public:
 private:
     std::vector<std::unique_ptr<CarInterface>> carList;
 };
-
-} // Automobile
 
 #endif /* DMV_H */

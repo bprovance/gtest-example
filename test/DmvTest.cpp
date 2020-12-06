@@ -8,9 +8,7 @@
 
 namespace MyTests {
 
-using namespace Automobile;
 using namespace testing;
-using namespace AutomobileMocks;
 using std::string;
 using std::unique_ptr;
 

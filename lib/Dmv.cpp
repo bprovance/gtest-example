@@ -1,7 +1,5 @@
 #include "Dmv.h"
 
-using namespace Automobile;
-
 Dmv::Dmv(std::unique_ptr<CarInterface> car) {
     carList.push_back(std::move(car));
 }

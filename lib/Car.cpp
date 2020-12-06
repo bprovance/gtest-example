@@ -1,7 +1,5 @@
 #include "Car.h"
 
-using namespace Automobile;
-
 Car::Car(const string& make, const string& model, const int& year) :
     _make(make),
     _model(model),

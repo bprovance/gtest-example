@@ -5,7 +5,6 @@
 
 namespace MyTests {
 
-using namespace Automobile;
 using namespace testing;
 using std::string;
 

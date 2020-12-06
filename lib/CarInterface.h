@@ -1,8 +1,6 @@
 #ifndef CAR_INTERFACE_H
 #define CAR_INTERFACE_H
 
-namespace Automobile {
-
 #include <string>
 
 class CarInterface {
@@ -14,7 +12,5 @@ public:
     virtual int getYear() const = 0;
     virtual int getRegistration() const = 0;
 };
-
-} // Automobile
 
 #endif /* CAR_INTERFACE_H */
