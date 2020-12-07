@@ -41,4 +41,12 @@ TEST_F(DmvTests, DMVAddCarAppendsCarList) {
     EXPECT_THAT(dmv.getNumCars(), Eq(2));
 }
 
+TEST_F(DmvTests, GetRegistrationReturnsCorrectValueOnCarNotFound) {
+    ON_CALL(*mockCar, getMake()).WillByDefault(Return("Chevrolet"));
+    ON_CALL(*mockCar, getModel()).WillByDefault(Return("Corvette"));
+
+    Dmv dmv(std::move(mockCar));
+    EXPECT_THAT(dmv.getRegistration("Ford", "Mustang"), Eq(-1));
+}
+
 } // MyTests
