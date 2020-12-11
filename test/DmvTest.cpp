@@ -33,7 +33,7 @@ TEST_F(DmvTests, DMVGetRegistrationReturnsExpectedValue) {
 }
 
 TEST_F(DmvTests, DMVAddCarAppendsCarList) {
-    unique_ptr<CarInterface> otherMockCar = std::make_unique<NiceMock<CarMock>>();
+    auto otherMockCar = std::make_unique<NiceMock<CarMock>>();
     Dmv dmv(std::move(mockCar));
     EXPECT_THAT(dmv.getNumCars(), Eq(1));
 

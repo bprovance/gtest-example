@@ -10,7 +10,7 @@ void Dmv::addCar(std::unique_ptr<CarInterface> car) {
 
 int Dmv::getRegistration(const std::string& make, const std::string& model) const {
     for (const auto& car : carList) {
-        if (car->getMake() == make && car->getModel() == model) {
+        if (car->getMake().compare(make) == 0 && car->getModel().compare(model) == 0) {
             return car->getRegistration();
         }
     }

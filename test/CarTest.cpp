@@ -21,18 +21,18 @@ public:
 
 
 TEST_F(CarTests, GetYearReturnsExpectedValue) {
-    const int expectedYear(1999);
+    const auto expectedYear(1999);
     EXPECT_THAT(myCar.getYear(), Eq(expectedYear));
 }
 
 TEST_F(CarTests, GetRegistrationReturnsExpectedValue) {
-    int registration = myCar.getRegistration();
+    const auto registration = myCar.getRegistration();
     EXPECT_GT(registration, 1000);
     EXPECT_LT(registration, 999999);
 }
 
 TEST_F(CarTests, GetLicensePlateReturnsCorrectLengthString) {
-    const string licensePlate = myCar.getLicensePlate();
+    const auto licensePlate = myCar.getLicensePlate();
     EXPECT_THAT(licensePlate.length(), Eq(6));
 }
 
