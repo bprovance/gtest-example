@@ -7,7 +7,7 @@ This project demonstrates:
  * How interfaces and mocks are used
  * How to write simple unit tests
 
-## Build
+### Build
 
 ```
 mkdir build
@@ -16,8 +16,8 @@ cmake ..
 make
 ```
 
-## Run unit tests
+### Run unit tests
 
 ```
-./test/car-test
+./build/test/car-test
 ```
