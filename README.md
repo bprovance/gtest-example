@@ -6,3 +6,18 @@ This project demonstrates:
  * How to setup CMake to build googletest
  * How interfaces and mocks are used
  * How to write simple unit tests
+
+## Build
+
+```
+mkdir build
+cd build
+cmake ..
+make
+```
+
+## Run unit tests
+
+```
+./test/car-test
+```
