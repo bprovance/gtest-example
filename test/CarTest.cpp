@@ -10,30 +10,30 @@ using std::string;
 
 class CarTests: public Test {
 public:
-    CarTests() = default;
+    CarTests() :
+        myCar("Ford", "Mustang", 1999) {
+
+    } 
     virtual ~CarTests() = default;
 
+    Car myCar;
 };
 
 
 TEST_F(CarTests, GetYearReturnsExpectedValue) {
-    const string make("Ford");
-    const string model("Mustang");
-    const int year(1999);
-    Car myCar(make, model, year);
-
-    EXPECT_THAT(myCar.getYear(), Eq(year));
+    const int expectedYear(1999);
+    EXPECT_THAT(myCar.getYear(), Eq(expectedYear));
 }
 
 TEST_F(CarTests, GetRegistrationReturnsExpectedValue) {
-    const string make("Ford");
-    const string model("Mustang");
-    const int year(1999);
-    Car myCar(make, model, year);
-
     int registration = myCar.getRegistration();
     EXPECT_GT(registration, 1000);
     EXPECT_LT(registration, 999999);
+}
+
+TEST_F(CarTests, GetLicensePlateReturnsCorrectLengthString) {
+    const string licensePlate = myCar.getLicensePlate();
+    EXPECT_THAT(licensePlate.length(), Eq(6));
 }
 
 } // MyTests

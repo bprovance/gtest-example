@@ -11,6 +11,7 @@ public:
     virtual std::string getModel() const = 0;
     virtual int getYear() const = 0;
     virtual int getRegistration() const = 0;
+    virtual std::string getLicensePlate() const = 0;
 };
 
 #endif /* CAR_INTERFACE_H */

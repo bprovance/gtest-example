@@ -15,6 +15,7 @@ public:
     MOCK_METHOD(string, getModel, (), (const, final));
     MOCK_METHOD(int, getYear, (), (const, final));
     MOCK_METHOD(int, getRegistration, (), (const, final));
+    MOCK_METHOD(std::string, getLicensePlate, (), (const, final));
 };
 
 #endif /* CAR_MOCK_H */
