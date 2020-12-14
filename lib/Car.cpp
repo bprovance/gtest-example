@@ -33,6 +33,6 @@ int Car::getRegistration() const {
     return _registration;
 }
 
-std::string Car::getLicensePlate() const {
+string Car::getLicensePlate() const {
     return _licensePlate;
 }
